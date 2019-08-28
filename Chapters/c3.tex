@@ -1,4 +1,22 @@
-\chapter {Preliminary Results}
+\chapter {Detailed Research Program}
+
+In previous work Ariel's deep learning lab developed a multi-modal, deep-learning based architecture for detecting whether a command given to an autonomous assistant agent is a correction of a previous command \cite{nivasch2019correction}.  We show that using both vocal cues and text results at an increase in accuracy (when compared to using text or voice only). We believe that the same properties that hold in correction detection are true also for deception detection, and therefore intend to use  similar methods for deception detection.
+
+\section{Goals}
+The goal of this project is to build well performed autonomous agents which can work in a deception environment. Sub-goals to achieve this includes multi-model (speech and text) input analysis, user dynamics analysis (behavior and demographic statistics), deception dataset and labels collection, detection model development and human-computer interaction.
+
+\subsection{Work Plan}
+In the first phase of the work will focus on detecting deception in the ``cheat game'' environment.
+The ``cheat game'' (also known as B.S. and the bluff game) is a turn taking card game where the players' goal is to get rid of all of their cards. After dealing 15 cards to each player, the game begins with a card flipped over from the deck of cards to a pile of cards.
+On each turn a player may place up-to 4 cards on the pile of cards, these cards may either contain cards that are one higher than the current card or one lower. The cards placed on the pile are faced-down, so the player may claim to put cards that are different than what he actually put. If a player suspects that a different player is cheating, the player may call out a cheat, and then, if the player did actually cheat, he collects all the cards, otherwise, the player that called out a cheat collects the cards. Instead of placing cards on the pile, a player may draw 3 cards from the deck. In our local simulation process we found that a 2 player game might take too long.To prevent paid players to loose interest and leave mid game we limited each game to 12 minutes. This will result in a dataset that is not only labeled by whether each player is deceptive or not as a whole, but each statement will include whether the other opponent thought it was deceptive. The players will be paid using Amazon's Mechanical Turk service. Which allows researchers and hi-tech companies to collect and label data by hiring people from all over the world. due to language limitations and different accents we will limit our player to be from the US only.    
+
+As to the fundamental module of the deception detection agent, i.e., the detection model, several issues will be studied in this project. First, we will explore the current classification models and their performance, then move a step forward to propose new models to detect deception with degree by leveraging data with scaling, or at least, the information that which is more possible to be a lie. Second, the factor of individuality in deception detection will be studied. Third, we plan to develop a model which can facilitate the received behavior related cues from autonomous agents and feedback its detection results to the agents to create a better communication environment. 
+
+In the second phase we will built our deception detection model based on deep learning methods. The model will firstly preprocess the data. We will need to cut the beginning and the end of each recording using sound detector. After that we will turn the recordings into spectrogram images. The spectrograms have shown promising results in previous speech based modules. Once the preprocessing stage is done we will insert the image into our deep network. The sane default attempt will be using RNN or CRNN. The model will firstly label the sound samples binary simply stating whether a statement is true or false. Next we will build a ranking system to determine the amount of surety the model have to each claim. 
+
+In the third phase we will build an autonomous agent to detect deception in real time. After training the model from phase II we will integrate it in a real time software connecting to the Cheat Game from phase I. The agent will play against real humans. We are hoping to show it will outplay them. Since, in order to complete a full game, the agent will also need to speak. We will set him only as a deception detection assistant. Meaning a real human will need to state the claims bu himself but calling a cheat and challenging the opponents claim will be done automatically using our agent.  
+
+
 \section {Theoretical Results}
 
 

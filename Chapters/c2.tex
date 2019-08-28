@@ -1,6 +1,22 @@
 % Related Works
 \chapter{Related Works} % Main chapter title
 \label{Chapter2}
-In the research \cite{balogh}, \cite{ttt}.
+
+
 \section {Related Works}
-\section {Motivation}
+
+Deception detection is a critical problem studied by psychologists, criminologists, and computer scientists~\cite{depaulo2003cues}. In recent years deception detection has aroused interest in the natural language processing as well as human computer interaction communities. Current models can adopt language and behavior cues, and research examining them to deception has been quite promising. However, the overall detection performance is still not satisfactory, especially when the model has not seen the similar patterns before (e.g., deception samples from the same speaker is not available). Prior work has examined deceptive language in several domains, including fake reviews~\cite{levitan2018linguistic}, mock crime scenes~\cite{bachenko2008verification,de2018mafiascum}
+, and opinions about different topics (such as Kaggle task on "Insincere Questions").
+
+There have been several works that used different methods for detecting lies, most of which use only text input~\cite{de2018mafiascum,fitzpatrick2015automatic} or only speech signals~\cite{enos2009detecting}. Only very recent there have been works providing datasets that are publicly available~\cite{perez2015experiments,de2018mafiascum}, which indeed motivate related research.
+
+
+
+\section {Proposed research}
+
+Deception is fairly common among humans, therefore, any autonomous agent developed to interact with humans must consider deceptive behavior and actions. We propose to build models that will detect whether a statement is true or false, based on vocal cues. We will also consider a novel ranking based method that takes into account the level of deception in each statement.
+There has been limited work on deception detection by speech. One of the main challenges in this domain is the gathering of accurate data. We therefore propose to develop on-line games that will collect data from subjects and we intend to release these datasets for the use of the community. 
+We believe that the models that will be developed will provide a significant contribution, and can be used in many applications that require deception detection (e.g. the domains of security, justice, federal etc.).
+In addition, we will compose a model that will be able to detect whether a given statement will be \emph{perceived} as a lie by humans. Finally, we will develop autonomous agents that will use the above models to interact with humans in deceptive environments.
+
+

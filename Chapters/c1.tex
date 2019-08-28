@@ -1,13 +1,34 @@
 \chapter{Introduction} % Main chapter title
 \label{Chapter1}
 \section {Problem of Interest}
+
+In this work we propose to develop methods for lie detection based on speech cues using novel methods. From the scientific aspect, we propose a novel method that uses a ranking on the truthfulness of each statement in order to achieve better results.
+In addition, we will develop a model that will detects whether a statement will be perceived as a lie or not by humans.
+Finally, based on these models we propose to develop agents that may interact with humans in deceptive environments. Therefore, the scientific contributions cover comprehensively the upstream technical innovation, the deception behavior discussions, i.e., delivering and perceiving of lies, and the downstream application to the autonomous agents.
+
 \section {Motivation}
+
+Throughout the history people have tried to develop a method for lie detection. In the far history, many cruel methods were used to detect liars (see \cite{trovillo1938history} for several examples of such methods). In 1921 John Augustus Larson invented the polygraph, a device intended to detect a lie by recording several body measures, such as breathing rate, pulse, blood pressure, and perspiration. It is assumed that all these measures accelerate while telling a lie.
+However, the accuracy of the polygraph and similar devices is highly debatable \cite{patrick1989psychopathy,ekman2003unmasking,grubin2006accuracy}, furthermore, these devices require the suspect to be attached to different appliance and cannot be preformed retrospectively, or when the suspect is not present.
+We therefore suggest a method for gathering data that will in-turn assist in building human deception models, and finally the development of autonomous agents.
+
+It is hard to overestimate the damage and harm caused by deception and fraud. The bible states (Leviticus 19,11) ``Do not lie, do not deceive one another'', and indeed throughout the history, deception has caused the loss of lives and property. However, not all lies may be harmful, and at times, it may be considered wise to tell a lie in order not to avoid hurting one's feeling or similar occasions. We believe any intelligent agent must be able to interact in an environment in which humans do not always tell the truth.
+
+As to the social and economic aspects, as far as we know the deception detection technology is in great demand for the security companies. They intend to use it in their interviews, and hence we expect that the outcome of this cooperative project to attach the market and bring new revenue. Most importantly, we are aware that \textbf{there has been some business of the lie detection prototype systems between Israel and Taiwan}. Hence, we believe this academic cooperative project shall lead the way to provide an advanced technical support to the industry and encourage substantial interactions between two countries, which is definitely the final goal of the project call. 
+
 \section {Our Contribution}
-In figure \ref{fig:mesh1} one can see a blue circle with a letter $e$ in it.
-\begin{figure}
- \centering
-   % \includegraphics[width=0.25\textwidth]{Figures/Ariel1.png}
-   \includegraphics[width=0.5\textwidth]{Figures/Electron.pdf}
-    \caption{a nice plot}
-    \label{fig:mesh1}
-\end{figure}
+
+Developing agents that interact with humans is not simple, especially in deceptive environments. Research into humans' behavior has found that people often deviate from what is thought to be the rational behavior, since they are affected by a variety of (sometimes conflicting) factors: a lack of knowledge of one's own preferences, the effects of the task complexity, framing effects, the interplay between emotion and cognition, the problem of self-control, the value of anticipation, future discounting, anchoring and many other effects~\cite{tversky81,Loewenstein00,ArielyAnchor,camerer03}.
+
+Several works have demonstrated that a machine learning approach, which builds upon psychological factors and human decision-making theory, is essential for developing a good model of true human behavior. The human behavior model is in turn required for successfully implementing agents that interact with humans~\cite{galPfe07,hindriks2008opponent,subrahmanian2000heterogeneous,RosenfeldK-aamas11}. In several previous works done in the deep learning lab at Ariel University, the researchers have modeled human behavior by recruiting human subjects via crowd sourcing platforms and allowing them to interact with a game \cite{AzariaRKGG12,AzariaRKGT12,azaria2015agent,nguyen2013analyzing}. Games provide a controlled environment and are a good source for obtaining high quality labeled datasets.
+We will follow this approach when developing autonomous agents for deceptive environments.
+
+Our expected contributions from this proposal are:
+\begin{enumerate}
+	\item The gathering of high quality datasets for deception detection:
+	(i) A speech dataset with accurate labels. Including the way the statement were perceived by other humans. 
+	\item The development of a lie detector, which uses verbal cues.
+	\item The development of a ranking based method, which uses ranked (continuous) labels on sentences in order to achieve higher accuracy.
+	\item The development of a component that detects whether a statement will be perceived as a lie or not by humans.
+	\item The development of autonomous agents that interact with humans. This agent will use the model developed in the previous phases. We expect to show that the autonomous agents will outperform humans.
+\end{enumerate}
