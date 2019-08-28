@@ -21,3 +21,49 @@ In the third phase we will build an autonomous agent to detect deception in real
 
 
 \section {Simulation Results}
+
+We have developed an online version of the ``cheat game''.  We developed our game for two players, which we will call Alice and Bob. 
+Alice selects the cards she wishes to dismiss, clicks a button and states her claim in speech (e.g. ``two sixes''). Alice must then click on the cards presenting her claim. We note that the current version involves no speech recognition. The claim is then played back to Bob who is required  to determine what he heard. Bob then places his cards, records his statement and so on. In case that Bob hears a statement different than what Alice claims her statement was, Alice collects all the cards. Alice may also open a dispute and the incident will be manually checked.
+
+The ``cheat game'' provides us with a controlled domain in which users may either lie or tell the truth; the game provides us quality labels as well. We intend to deploy the game in a crowd-based platform (e.g. Mechanical Turk) and collect approximately 10,000 recordings. We will use the data to develop a good classifier that, given an utterance, will determine whether the statement is true or false. We will also develop a classifier that will predict whether a statement raises suspicion or not.
+We will use these models to develop an agent that will play the ``cheat game'' with an attempt to outperform humans at this game
+
+See Figure \ref{fig:cheatgamegui} for a screen-shot of the game.
+
+\begin{figure}[tbph]
+	\centering
+	\includegraphics[width=4.5in]{Chapters/cheat_game_GUI}
+	\caption{The graphical interfaced developed for the ``cheat game''.}
+	\label{fig:cheatgamegui}
+\end{figure}
+
+
+Model wise, we have conducted experiments on students live play dataset, which includes 243 samples recorded in our lab by the students themselves as a study project. As a preliminary test, they encoded the dialogues with the RNN model and constructed a simple classifier to distinguish the deception from the truth. The results are shown in Tables ~\ref{Table:undergradsres} ~\ref{Table:undergradsres_pref}. Interestingly, we see that even on a small scale of data and with limited calculation resources it is possible to achieve a much better than random results. Meaning in our research, using a much larger and less heterogeneous dataset we believe we can transcend this results.   
+
+
+\begin{table}[tbph]
+	\centering
+	\begin{tabular}{|c|c|l|}
+		\hline
+		\textbf{}              & \textbf{Correct prediction} & \textbf{False prediction} \\ \hline
+		\textbf{True statment} & 100                         & 22                        \\ \hline
+		\textbf{Lie statment}  & 66                          & 55                        \\ \hline
+	\end{tabular}
+	\caption{Lie detection results }
+	\label{Table:undergradsres}
+\end{table}
+
+\begin{table}[tbph]
+	\centering
+	\begin{tabular}{|c|c|l|}
+		\hline
+		 \multicolumn{1}{|l|}{recall}    & \multicolumn{1}{l|}{precision}  & \multicolumn{1}{l|}{accuracy}  \\ \hline
+		 \multicolumn{1}{|l|}{0.54} 		& \multicolumn{1}{l|}{0.75} & \multicolumn{1}{l|}{0.68} \\ \hline
+                                                            
+	\end{tabular}
+	\caption{Lie detection performance on face too face game dataset. By undergrad students}
+	\label{Table:undergradsres_pref}
+\end{table}
+
+
+
