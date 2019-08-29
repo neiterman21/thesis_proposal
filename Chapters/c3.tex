@@ -38,32 +38,7 @@ See Figure \ref{fig:cheatgamegui} for a screen-shot of the game.
 \end{figure}
 
 
-Model wise, we have conducted experiments on students live play dataset, which includes 243 samples recorded in our lab by the students themselves as a study project. As a preliminary test, they encoded the dialogues with the RNN model and constructed a simple classifier to distinguish the deception from the truth. The results are shown in Tables ~\ref{Table:undergradsres} ~\ref{Table:undergradsres_pref}. Interestingly, we see that even on a small scale of data and with limited calculation resources it is possible to achieve a much better than random results. Meaning in our research, using a much larger and less heterogeneous dataset we believe we can transcend this results.   
 
-
-\begin{table}[tbph]
-	\centering
-	\begin{tabular}{|c|c|l|}
-		\hline
-		\textbf{}              & \textbf{Correct prediction} & \textbf{False prediction} \\ \hline
-		\textbf{True statment} & 100                         & 22                        \\ \hline
-		\textbf{Lie statment}  & 66                          & 55                        \\ \hline
-	\end{tabular}
-	\caption{Lie detection results }
-	\label{Table:undergradsres}
-\end{table}
-
-\begin{table}[tbph]
-	\centering
-	\begin{tabular}{|c|c|l|}
-		\hline
-		 \multicolumn{1}{|l|}{recall}    & \multicolumn{1}{l|}{precision}  & \multicolumn{1}{l|}{accuracy}  \\ \hline
-		 \multicolumn{1}{|l|}{0.54} 		& \multicolumn{1}{l|}{0.75} & \multicolumn{1}{l|}{0.68} \\ \hline
-                                                            
-	\end{tabular}
-	\caption{Lie detection performance on face too face game dataset. By undergrad students}
-	\label{Table:undergradsres_pref}
-\end{table}
 
 
 
